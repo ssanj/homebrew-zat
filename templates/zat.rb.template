@@ -1,0 +1,24 @@
+# typed: false
+# frozen_string_literal: true
+
+# Zat Formula
+class Zat < Formula
+  desc "Zat - A simple project templating system"
+  homepage "https://github.com/ssanj/zat"
+  url "https://github.com/ssanj/zat/archive/refs/tags/v$VERSION.tar.gz"
+  version "$VERSION"
+  sha256 "$SHA256"
+  license "BSD 3-Clause 'New' or 'Revised' License"
+
+  depends_on "rust" => :build
+
+  def install
+    system "cargo", "build", "--release", "--bin", "zat"
+    bin.install "target/release/zat"
+  end
+
+  test do
+    output = shell_output("#{bin}/zat -V")
+    assert_equal ["zat $VERSION\n"], output.lines
+  end
+end
