@@ -3,7 +3,7 @@
 
 # Zat Formula
 class Zat < Formula
-  desc "Zat - A simple project templating system"
+  desc "A simple project templating system"
   homepage "https://github.com/ssanj/zat"
   url "https://github.com/ssanj/zat/archive/refs/tags/v0.11.10.tar.gz"
   version "0.11.10"
@@ -13,7 +13,7 @@ class Zat < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--release", "--bin", "zat"
+    system "cargo", "install", *std_cargo_args
     bin.install "target/release/zat"
   end
 
