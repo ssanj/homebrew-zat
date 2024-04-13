@@ -3,7 +3,7 @@
 
 # Zat Formula
 class Zat < Formula
-  desc "A simple project templating system"
+  desc "Simple project templating system"
   homepage "https://github.com/ssanj/zat"
   url "https://github.com/ssanj/zat/archive/refs/tags/v0.11.10.tar.gz"
   version "0.11.10"
