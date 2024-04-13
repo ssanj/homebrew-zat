@@ -5,9 +5,9 @@
 class Zat < Formula
   desc "Zat - A simple project templating system"
   homepage "https://github.com/ssanj/zat"
-  url "https://github.com/ssanj/zat/archive/refs/tags/v0.11.10.tar.gz"
-  version "0.11.10"
-  sha256 "3705bcd7c47e500b2682653b95d073e446c7bf1f7e7719056c63d0442607eb7e"
+  url "https://github.com/ssanj/zat/archive/refs/tags/v0.11.11-1-test.tar.gz"
+  version "0.11.11-1-test"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "BSD 3-Clause 'New' or 'Revised' License"
 
   depends_on "rust" => :build
@@ -19,6 +19,6 @@ class Zat < Formula
 
   test do
     output = shell_output("#{bin}/zat -V")
-    assert_equal ["zat 0.11.10\n"], output.lines
+    assert_equal ["zat 0.11.11-1-test\n"], output.lines
   end
 end
