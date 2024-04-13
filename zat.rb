@@ -19,6 +19,6 @@ class Zat < Formula
 
   test do
     output = shell_output("#{bin}/zat -V")
-    assert_equal ["zat 0.11.10\n"], output.lines
+    assert_equal ["zat 0.11.12\n"], output.lines
   end
 end
