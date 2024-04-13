@@ -8,7 +8,7 @@ class Zat < Formula
   url "https://github.com/ssanj/zat/archive/refs/tags/v0.11.10.tar.gz"
   version "0.11.10"
   sha256 "3705bcd7c47e500b2682653b95d073e446c7bf1f7e7719056c63d0442607eb7e"
-  license "BSD 3-Clause 'New' or 'Revised' License"
+  license "BSD-3-Clause"
 
   depends_on "rust" => :build
 
